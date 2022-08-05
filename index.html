@@ -96,7 +96,7 @@
               </g>
             </svg>
           </div>
-          <span>Graphic Design</span>
+          <span class="heading-span">Graphic Design</span>
         </article>
         <article class="grid-element-2">
           <div class="grid-picture">
@@ -120,7 +120,7 @@
               </g>
             </svg>
           </div>
-          <span>UI/UX</span>
+          <span class="heading-span">UI/UX</span>
         </article>
         <article class="grid-element-3">
           <div class="grid-picture">
@@ -146,7 +146,7 @@
               </g>
             </svg>
           </div>
-          <span>Apps</span>
+          <span class="heading-span">Apps</span>
         </article>
         <article class="grid-element-4">
           <div class="grid-picture">
@@ -188,7 +188,7 @@
               </g>
             </svg>
           </div>
-          <span>Illustrations</span>
+          <span class="heading-span">Illustrations</span>
         </article>
         <article class="grid-element-5">
           <div class="grid-picture">
@@ -232,7 +232,7 @@
               </g>
             </svg>
           </div>
-          <span>Photography</span>
+          <span class="heading-span">Photography</span>
         </article>
         <article class="grid-element-6">
           <div class="grid-picture">
@@ -284,7 +284,7 @@
               </g>
             </svg>
           </div>
-          <span>Motion Graphics</span>
+          <span class="heading-span">Motion Graphics</span>
         </article>
       </section>
       <header class="hero">
@@ -304,18 +304,39 @@
         </div>
       </header>
       <section>
-        <h3 class="heading-s">My Work</h3>
+        <h3 class="heading-s work-heading">My Work</h3>
         <div class="img-container">
-          <div class="image-slide">
-            <img src="assets/image-slide-1.jpg" alt="" />
-            <img src="assets/image-slide-2.jpg" alt="" />
-            <img src="assets/image-slide-3.jpg" alt="" />
-            <img src="assets/image-slide-4.jpg" alt="" />
-            <img src="assets/image-slide-5.jpg" alt="" />
+          <div class="carousel">
+            <div class="carousel__track-container">
+              <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                  <img src="/assets/image-slide-1.jpg" alt="" />
+                </li>
+                <li class="carousel__slide">
+                  <img src="/assets/image-slide-2.jpg" alt="" />
+                </li>
+                <li class="carousel__slide">
+                  <img src="/assets/image-slide-3.jpg" alt="" />
+                </li>
+                <li class="carousel__slide">
+                  <img src="/assets/image-slide-4.jpg" alt="" />
+                </li>
+                <li class="carousel__slide">
+                  <img src="/assets/image-slide-5.jpg" alt="" />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        <div class="carousel__nav">
+          <button class="carousel__indicator current-slide"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
+        </div>
         <div class="arrow-buttons-div">
-          <button class="arrow-buttons button-black">
+          <button class="arrow-buttons button-black prevBtn">
             <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill="#FFF"
@@ -323,7 +344,7 @@
               />
             </svg>
           </button>
-          <button class="arrow-buttons button-black">
+          <button class="arrow-buttons button-black nextBtn">
             <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill="#FFF"
@@ -359,5 +380,6 @@
         <button class="button button-black">Free Consultation</button>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

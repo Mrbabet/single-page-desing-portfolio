@@ -3,6 +3,7 @@
 *::before {
   box-sizing: border-box;
 }
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
 
 /* Css reset */
 html,
@@ -448,29 +449,37 @@ textarea {
 }
 /* Css reset */
 /* Typography */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
+
 .heading-l {
   font-size: 36px;
   line-height: 40px;
   font-weight: bold;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 .heading-m {
   font-size: 26px;
   line-height: 32px;
   font-weight: bold;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 .heading-s {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 .heading-span {
   font-size: 20px;
   line-height: 36px;
   font-weight: bold;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 .body-m {
   font-size: 16px;
   line-height: 26px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #7a746e;
 }
 .work-heading {
   margin-bottom: 2rem;

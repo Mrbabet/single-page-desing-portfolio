@@ -484,6 +484,10 @@ h3,
 h4 {
   text-align: center;
 }
+.container {
+  min-width: 343px;
+  margin: 0 auto;
+}
 
 .container-wrapper {
   margin: 1rem;
@@ -542,6 +546,9 @@ nav {
   background-color: #755cde;
   grid-column: 1/3;
   grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .grid-element-2 {
   background-color: #f6a560;
@@ -570,6 +577,7 @@ nav {
 }
 .hero {
   margin-bottom: 6.25rem;
+  margin-inline: 1rem;
 }
 .background-img {
   aspect-ratio: 1/1;
@@ -600,11 +608,26 @@ nav {
   border-radius: 50%;
   margin-top: 2rem;
 }
+.arrow-buttons:hover,
+.button-black:hover {
+  background-color: #755cde;
+  transition: ease-in-out 200ms;
+}
+.button-color:hover {
+  background-color: #f6a560;
+  transition: ease-in-out 200ms;
+}
 .arrow-buttons:nth-child(1) {
   margin-right: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .arrow-buttons:nth-child(2) {
   margin-left: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .book-a-call {
   background-color: #000;
@@ -619,11 +642,11 @@ nav {
   margin-inline: 1.5rem;
   text-align: center;
 }
-.book-a-call > h2 {
+.book-a-call h2 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.book-a-call > p {
+.book-a-call p {
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -631,12 +654,12 @@ nav {
 .carousel {
   position: relative;
   height: 300px;
-  width: 80%;
+  width: 90%;
 }
 img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .img-container {
   display: flex;
@@ -647,7 +670,7 @@ img {
   height: 100%;
   position: relative;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .carousel__track {
@@ -664,22 +687,8 @@ img {
   bottom: 0;
   width: 100%;
 }
-.carousel__button {
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
 
-  background-color: transparent;
-}
-.carousel__button--left {
-  left: -50px;
-}
-.carousel__button--right {
-  right: -50px;
-  z-index: 100;
-}
 .carousel__nav {
-  /* background-color: pink; */
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -697,7 +706,7 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 570px) {
   .heading-l {
     font-size: 44px;
     line-height: auto;
@@ -779,16 +788,29 @@ img {
     grid-row: 3/4;
   }
   .hero {
+    margin-inline: 0;
     margin-bottom: 6.25rem;
     display: flex;
+    text-align: left;
+    margin-right: 2rem;
+  }
+  .hero-wrapper {
+    display: flex;
+  }
+  .hero > * {
+    text-align: left;
+  }
+  .hero h2 {
+    text-align: left;
   }
 
   .background-img {
-    width: 364px;
-    height: 364px;
+    width: 300px;
+    height: 300px;
     background-image: url(/assets/image-amy.webp);
     background-size: cover;
-    margin-right: 4rem;
+    background-repeat: no-repeat;
+    margin-right: 2rem;
   }
   .hero-wrapper {
     display: flex;
@@ -799,12 +821,150 @@ img {
     margin-inline: 5rem;
     text-align: center;
   }
-  .book-a-call > h2 {
+  .book-a-call h2 {
     margin-bottom: 1.6rem;
     text-align: center;
   }
-  .book-a-call > p {
+  .book-a-call p {
     margin-bottom: 1.6rem;
     text-align: center;
+  }
+  .book-a-call {
+    background-color: #000;
+    padding-block: 4rem;
+    border-radius: 0.5rem;
+    max-width: 700px;
+    margin: 4rem auto;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .heading-l {
+    font-size: 56px;
+    line-height: 70px;
+    font-weight: bold;
+  }
+  .heading-m {
+    font-size: 40px;
+    line-height: 51px;
+    font-weight: bold;
+  }
+  .heading-s {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  .heading-span {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+  }
+  .body-m {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .work-heading {
+    margin-bottom: 4rem;
+  }
+
+  .container-wrapper {
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    margin-inline: 10rem;
+    /* max-width: 1111px;
+    margin: 0 auto; */
+  }
+  .grid-box {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    margin-bottom: 6.25rem;
+    max-width: 1100px;
+  }
+  .grid-box > * {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  .grid-picture {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+  }
+  .grid-element-1 {
+    background-color: #755cde;
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .grid-element-2 {
+    background-color: #f6a560;
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .grid-element-3 {
+    background-color: #f39e9e;
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+  .grid-element-4 {
+    background-color: #eb7565;
+    grid-column: 3/5;
+    grid-row: 2/3;
+  }
+  .grid-element-5 {
+    background-color: #61c4b7;
+    grid-column: 5/7;
+    grid-row: 1/1;
+  }
+  .grid-element-6 {
+    background-color: #552049;
+    grid-column: 5/7;
+    grid-row: 2/2;
+  }
+  .hero {
+    margin-bottom: 6.25rem;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+  .background-img {
+    width: 300px;
+    height: 300px;
+    background-image: url(/assets/image-amy.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 6rem;
+  }
+  nav,
+  footer {
+    max-width: 1100px;
+    margin: 2rem auto;
+  }
+  .book-a-call {
+    background-color: #000;
+    padding-block: 4rem;
+    border-radius: 0.5rem;
+    max-width: 1100px;
+    margin: 6rem auto;
+    display: flex;
+  }
+  .book-a-call > * {
+    margin-inline: 5rem;
+    text-align: center;
+  }
+  .book-a-call h2 {
+    margin-bottom: 1.6rem;
+    text-align: left;
+  }
+  .book-a-call p {
+    margin-bottom: 1.6rem;
+    text-align: left;
+  }
+  .button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
   }
 }
